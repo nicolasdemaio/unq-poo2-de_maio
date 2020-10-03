@@ -19,11 +19,8 @@ public abstract class Empleado {
 	}
 	
 	public int edad() {
-		
-		int añoActual = 2020;
-		
+		int añoActual = LocalDate.now().getYear();
 		return (añoActual - fechaNacimiento.getYear());
-		
 	}
 	
 	public int sueldoBasico() {
