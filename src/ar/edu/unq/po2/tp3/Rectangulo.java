@@ -2,6 +2,10 @@ package ar.edu.unq.po2.tp3;
 
 public class Rectangulo {
 
+	// A la hora de crear la clase Cuadrado deberiamos modificar el constructor, dado que el ancho y alto de un cuadrado es igual.
+	// Podría crearse una interface IForma que este implementada por las figuras que se quiera crear y en su protocolo tenga los metodos tales como:
+	// #getArea(), #base(), #altura(); #perimetro().
+	
 	private Point esquinaInferiorIzquierda;
 	private Point esquinaSuperiorIzquierda;
 	private Point esquinaInferiorDerecha;

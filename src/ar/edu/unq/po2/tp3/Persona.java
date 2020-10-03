@@ -33,7 +33,7 @@ public class Persona {
 	}
 	
 	public int getEdad() {
-		int añoActual = 2020;
+		int añoActual = LocalDate.now().getYear();
 		return añoActual - getFechaNacimiento().getYear();
 	}
 	
