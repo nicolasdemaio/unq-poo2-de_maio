@@ -39,7 +39,7 @@ public class Banco {
 	public void setSectorContable(SectorContable sectorContable) {
 		this.sectorContable = sectorContable;
 	}
-	
+
 	public List<Cliente> getClientes(){
 		return clientes;
 	}
