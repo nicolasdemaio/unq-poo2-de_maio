@@ -32,7 +32,7 @@ public abstract class Empleado {
 	
 	public int sueldoNeto() {
 		
-		int monto = sueldoBruto() - retenciones();
+		int monto = this.sueldoBruto() - this.retenciones();
 		return monto;
 		
 	}

@@ -14,43 +14,29 @@ public class Empresa {
 		this.cuit = cuit;
 	}
 	
-	public int montoSueldosNetos() {
-		int monto = empleados.stream().mapToInt(empleado -> empleado.sueldoNeto()).sum();
-		return monto;	
+	public int montoSueldosNetos() 
+	{
+		return empleados.stream().mapToInt(Empleado::sueldoNeto).sum();
 	}
 	
-	public int montoSueldosBrutos() {
-		int monto = 0;
-		
-		for (Empleado empleado : empleados) {
-			monto += empleado.sueldoBruto();
-		}
-		
-		return monto;
+	public int montoSueldosBrutos() 
+	{
+		return empleados.stream().mapToInt(Empleado::sueldoBruto).sum();
 	}
 	
-	public int montoRetenciones() {
-		int monto = 0;
-		
-		for (Empleado empleado : empleados) {
-			monto += empleado.retenciones();
-		}
-		
-		return monto;
+	public int montoRetenciones() 
+	{
+		return empleados.stream().mapToInt(Empleado::retenciones).sum();
 	}
 	
 	public void liquidarSueldos() {
 		
-		for (Empleado empleado : empleados) {
-			this.generarRecibo(empleado);
-		}
-		
+		empleados.stream().forEach(this::generarRecibo); // Un stream de empleados, por cada uno, this (Empresa) genera recibo.
 	}
 	
 	public void generarRecibo(Empleado empleado) 
 	{
-		ReciboDeHaberes recibo = new ReciboDeHaberes(empleado);
-		recibos.add(recibo);
+		recibos.add(new ReciboDeHaberes(empleado));
 	}
 	
 	public void setNombre(String nombre) {
@@ -80,6 +66,5 @@ public class Empresa {
 	public void agregarEmpleado(Empleado empleado) {
 		empleados.add(empleado);
 	}
-	
 	
 }

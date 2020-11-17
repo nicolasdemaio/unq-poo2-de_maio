@@ -26,14 +26,13 @@ public class Banco {
 	
 	public List<SolicitudCredito> solicitudesAceptables()
 	{
-		return solicitudes.
-				stream().
-				filter(solicitud -> solicitud.esAceptable()).
-				collect(Collectors.toList());
+		return solicitudes.stream()
+							.filter(SolicitudCredito::esAceptable)
+							.collect(Collectors.toList());
 	}
 	
 	public double totalADesembolsar() {
-		return sectorContable.totalADesembolsar(solicitudesAceptables());
+		return sectorContable.totalADesembolsar(this.solicitudesAceptables());
 	}
 	
 	public void setSectorContable(SectorContable sectorContable) {

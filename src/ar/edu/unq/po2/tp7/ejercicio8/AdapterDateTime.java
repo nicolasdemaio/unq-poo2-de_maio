@@ -17,7 +17,7 @@ public class AdapterDateTime implements IFecha {
 	}
 
 	@Override
-	public boolean antesDeAhora() {
+	public boolean antesDeAhora() { 
 		return this.fecha.isBeforeNow();
 	}
 

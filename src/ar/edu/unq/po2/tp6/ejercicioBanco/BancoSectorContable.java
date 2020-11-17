@@ -6,9 +6,9 @@ public class BancoSectorContable implements SectorContable {
 
 	@Override
 	public double totalADesembolsar(List<SolicitudCredito> solicitudesAceptables) {
-		return solicitudesAceptables.stream().
-									mapToDouble(solicitud -> solicitud.getMonto()).
-									sum();
+		return solicitudesAceptables.stream()
+									.mapToDouble(SolicitudCredito::getMonto)
+									.sum();
 	}
 
 	
