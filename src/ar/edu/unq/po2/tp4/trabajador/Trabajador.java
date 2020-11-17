@@ -1,42 +1,32 @@
 package ar.edu.unq.po2.tp4.trabajador;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Trabajador {
 
-	private ArrayList<Ingreso> ingresos;
+	private List<Ingreso> ingresos;
 	
 	public Trabajador() {
 		ingresos = new ArrayList<>();
 	}
 	
-	public ArrayList<Ingreso> getIngresos() {
-		return ingresos;
+	public List<Ingreso> getIngresos() {
+		return this.ingresos;
 	}
 
-	public double getTotalPercibido() {
-		
-		/*double monto = 0;
-		for (Ingreso ingreso : ingresos) {
-			monto += ingreso.getMonto();
-		}
-		
-		return monto;*/
-		
-		// Hecho con Lambda Expressions. Bloques como Smalltalk.
-		return ingresos.stream().mapToDouble(ingreso -> ingreso.getMonto()).sum();
+	public double getTotalPercibido() 
+	{
+		return ingresos.stream().mapToDouble(Ingreso::getMonto).sum();
 	}
 
 	public void añadirIngreso(Ingreso ingreso) {
 		ingresos.add(ingreso);
 	}
 
-	public double getMontoImponible() {
-		double montoImponible = 0;
-		for (Ingreso ingreso : ingresos) {
-			montoImponible += ingreso.montoImponible();
-		}
-		return montoImponible;
+	public double getMontoImponible() 
+	{
+		return ingresos.stream().mapToDouble(Ingreso::montoImponible).sum();
 	}
 
 	public double getImpuestoAPagar() {
