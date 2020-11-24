@@ -37,7 +37,7 @@ public class Producto implements Registrable {
 	}
 
 	public void decrementarStock() {
-		stock --;
+		this.stock --;
 	}
 
 	@Override

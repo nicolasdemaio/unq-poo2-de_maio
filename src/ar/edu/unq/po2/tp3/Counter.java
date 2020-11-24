@@ -14,58 +14,29 @@ public class Counter {
 		numeros.add(numero);
 	}
 	
-	public int cantidadDePares() {
+	public int cantidadDePares() 
+	{
+		Integer cantNrosPares = (int) this.numeros.stream().map(numero -> numero % 2 == 0).count();
 		
-		int nrosPares = 0;
-		
-		for (Integer numero : numeros) {
-			
-			if(numero % 2 == 0) {
-				nrosPares++;
-			}
-			
-		}
-		
-		return nrosPares;
-		
+		return cantNrosPares;
 	}
 	
 	public int cantidadDeImpares() {
 		
-		int nrosImpares = 0;
+		Integer cantNrosPares = (int) this.numeros.stream().map(numero -> numero % 2 != 0).count();
 		
-		for (Integer numero : numeros) {
-			
-			if(numero % 2 != 0) {
-				nrosImpares++;
-			}
-			
-		}
-		
-		return nrosImpares;
-		
+		return cantNrosPares;
 	}
 	
 	public int cantidadDeMultiplos(int unNumero) {
 		
-		int cantidadDeMultiplos = 0;
+		Integer cantMultiplos = (int) this.numeros.stream().map(numero -> esMultiplo(unNumero, numero)).count();
 		
-		for (Integer numero : numeros) {
-			
-			if(esMultiplo(unNumero, numero)) {
-				cantidadDeMultiplos++;
-			}
-			
-		}
-		
-		return cantidadDeMultiplos;
-		
+		return cantMultiplos;
 	}
 	
 	private boolean esMultiplo(int unNumero, int otroNumero) {
 		
 		return (unNumero % otroNumero == 0);
-		
 	}
-	
 }

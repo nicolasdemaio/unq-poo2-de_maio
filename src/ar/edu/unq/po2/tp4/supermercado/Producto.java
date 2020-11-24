@@ -23,7 +23,7 @@ public class Producto {
 	}
 	
 	public void aumentarPrecio(Double cantidad) {
-		setPrecio(this.precio + cantidad);
+		this.setPrecio(this.precio + cantidad);
 	}
 
 	public String getNombre() {

@@ -13,33 +13,31 @@ class CartaTest {
 
 	@Test
 	void testConstructor() {
-		Carta carta4Diamante = new Carta(4, 'D');
+		Carta carta4Diamante = new Carta("4", "D");
 		//Verify
-        assertEquals(4,carta4Diamante.getValor());
-        assertEquals('D',carta4Diamante.getPalo());
+        assertEquals(4,carta4Diamante.getValorNumerico());
+        assertEquals("D",carta4Diamante.getPalo());
     }
     
     @Test
-    void testSielValorDeUnaCartaEsMayorAlDeOtraEsMayorReflejaEsaRealidad() {
+    void testElValorDeUnaCarta_EsMayor_AlValorDeOtraCarta() {
         //Setup 
-        Carta carta4Diamante = new Carta(4,'D');
-        Carta carta5Diamante = new Carta(5,'D');
+        Carta carta4Diamante = new Carta("4","D");
+        Carta carta5Diamante = new Carta("5", "D");
         //Verify
-        assertTrue(carta5Diamante.esMayor(carta4Diamante));
-        assertFalse(carta4Diamante.esMayor(carta5Diamante));
+        assertTrue(carta5Diamante.esDeValorSuperiorA(carta4Diamante));
+        assertFalse(carta4Diamante.esDeValorSuperiorA(carta5Diamante));
     }
     
     @Test
-    void testSiDosCartasPoseenElMismoPaloEsMismoPaloReflejaEsaRealidad() {
+    void testDosCartas_PoseenElMismoPalo() {
         //Setup
-        Carta carta10Picas    =    new Carta (10,'P');
-        Carta carta2Picas     =    new Carta (2,'P');
-        Carta carta5Corazones =    new Carta (5,'C');
+        Carta carta10Picas    =    new Carta ("10","P");
+        Carta carta2Picas     =    new Carta ("2","P");
+        Carta carta5Corazones =    new Carta ("5","C");
         //Verify
         assertTrue(carta10Picas.esMismoPalo(carta2Picas));
-        assertFalse(carta10Picas.esMismoPalo(carta5Corazones));
-        
-        
+        assertFalse(carta10Picas.esMismoPalo(carta5Corazones)); 
     }
 
 }

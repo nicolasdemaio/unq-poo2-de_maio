@@ -5,11 +5,8 @@ import java.time.LocalDate;
 
 public class RegistroAutomotor {
 
-	public Boolean debeRealizarVtv(Vehiculo vehiculo, LocalDate fecha) {
-		
-		//Vehiculos policiales no realizan VTV, tienen otro tipo de control.
-		// Relizan VTV los vehiculos con mas de 1 anio de antiguedad y radicas en 'Buenos Aires'
-		
+	public Boolean debeRealizarVtv(Vehiculo vehiculo, LocalDate fecha) 
+	{
 		return (vehiculo.debeRealizarVtv(fecha));
 	}
 }
