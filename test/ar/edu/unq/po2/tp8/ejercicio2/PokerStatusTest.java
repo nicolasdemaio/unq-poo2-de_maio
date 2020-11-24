@@ -116,7 +116,7 @@ class PokerStatusTest {
 	}
 	
 	@Test
-	void cuandoUnaJugadaEsPokerYLaOtraEsDistintoDePoker_GanaLaPrimeraJugada() {
+	void cuandoUnaJugadaEsPokerYLaOtraNo_GanaLaPrimeraJugada() {
 		//SETUP
 		//SUT
 		PokerStatus status = new PokerStatus();
