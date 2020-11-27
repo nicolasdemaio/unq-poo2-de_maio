@@ -10,7 +10,7 @@ public class Consigna2 {
 		
 		//System.out.println(s.length()); // 3
 		
-		//System.out.println(t.length()); // No inicializada
+		//System.out.println(t.length()); // No inicializada - error
 		
 		//System.out.println(1 + a); // "1abc"
 		

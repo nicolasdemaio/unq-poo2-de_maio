@@ -2,14 +2,15 @@ package ar.edu.unq.po2.tp3;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class EquipoDeTrabajo {
 
 	private String nombre;
-	private ArrayList<Persona> integrantes;
+	private List<Persona> integrantes;
 	
 	public EquipoDeTrabajo(String nombre) {
-		integrantes = new ArrayList<>();
+		integrantes = new ArrayList<Persona>();
 		this.nombre = nombre;
 	}
 	
@@ -17,23 +18,19 @@ public class EquipoDeTrabajo {
 		return nombre;
 	}
 	
-	public ArrayList<Persona> getIntegrantes(){
-		return integrantes;
+	public List<Persona> getIntegrantes(){
+		return this.integrantes;
 	}
 	
 	public void agregarIntegrantes(Persona persona) {
-		integrantes.add(persona);
+		this.getIntegrantes().add(persona);
 	}
 	
 	public int promedioEdad() {
 		
 		int cantIntegrantes = integrantes.size();
 		
-		int sumaEdades = 0;
-		
-		for (Persona persona : integrantes) {
-			sumaEdades += persona.getEdad();
-		}
+		int sumaEdades = this.getIntegrantes().stream().mapToInt(Persona::getEdad).sum();
 		
 		return (sumaEdades/cantIntegrantes);
 		
