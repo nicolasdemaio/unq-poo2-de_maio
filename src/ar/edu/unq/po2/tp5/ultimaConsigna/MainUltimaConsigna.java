@@ -18,6 +18,7 @@ public class MainUltimaConsigna {
 		
 		// El polimorfismo se asegura mediante Interface si son dos clases que no tiene lo necesario para pertenecer a una jerarquia en común.
 		// Para poder agregar a la coleccion, tanto Persona como Mascota deben pertenecer a una interface/clase.
+		// Con la interface le brindamos un tipo en comun, sin tener estructura/comportamiento similar.
 		
 		ArrayList<SerVivo> seresVivos = new ArrayList<>();
 		

@@ -5,13 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unq.po2.tp5.ejercicioCaja.Caja;
-import ar.edu.unq.po2.tp5.ejercicioCaja.DummyAgencia;
-import ar.edu.unq.po2.tp5.ejercicioCaja.Impuesto;
-import ar.edu.unq.po2.tp5.ejercicioCaja.Producto;
-import ar.edu.unq.po2.tp5.ejercicioCaja.ProductoDeCooperativa;
-import ar.edu.unq.po2.tp5.ejercicioCaja.Servicio;
-
 class CajaTest {
 
 	private Caja caja;
@@ -32,17 +25,19 @@ class CajaTest {
 	}
 
 	@Test
-	void alRegistrarLasInstanciasDeArribaElMontoTotalEs49() {
-		caja.registrar(producto);
-		caja.registrar(productoCooperativa); // Este producto tiene 10 porciento descuento
-		caja.registrar(impuesto);
-		caja.registrar(servicio);
+	void alRegistrarRegistrables_ElMontoTotalEs49() {
+		caja.registrar(producto); // 25$
+		caja.registrar(productoCooperativa); // 9$ = Este producto tiene 10 porciento descuento = 
+		caja.registrar(impuesto); // 5$
+		caja.registrar(servicio); // 10$
+		
 		assertEquals(49, caja.montoTotal());
 	}
 	
 	@Test
 	void cuandoLaCajaRegistraUnaFacturaLaCantidadDeFacturasRegistradasDeLaAgenciaEs1() {
 		caja.registrar(impuesto);
+		
 		assertEquals(1, agencia.getFacturasRegistradas());
 	}
 
