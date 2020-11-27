@@ -1,6 +1,5 @@
 package ar.edu.unq.po2.tp6.ejercicioBanco;
 
-import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;

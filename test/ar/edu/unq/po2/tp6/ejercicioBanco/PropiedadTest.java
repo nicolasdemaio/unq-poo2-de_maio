@@ -3,10 +3,7 @@ package ar.edu.unq.po2.tp6.ejercicioBanco;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import ar.edu.unq.po2.tp6.ejercicioBanco.Propiedad;
 
 class PropiedadTest {
 
