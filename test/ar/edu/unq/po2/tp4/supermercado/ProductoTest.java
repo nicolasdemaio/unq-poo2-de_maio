@@ -3,8 +3,6 @@ package ar.edu.unq.po2.tp4.supermercado;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unq.po2.tp4.supermercado.Producto;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProductoTest {
@@ -32,6 +30,7 @@ public class ProductoTest {
 	@Test
 	public void testAumentarPrecio() {
 		arroz.aumentarPrecio(1.5);
+		
 		assertEquals(20.4d, arroz.getPrecio());
 	}
 }

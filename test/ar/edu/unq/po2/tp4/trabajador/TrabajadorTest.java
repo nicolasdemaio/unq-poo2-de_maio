@@ -40,6 +40,7 @@ class TrabajadorTest {
 	void testGetTotalPercibido() {
 		trabajador.añadirIngreso(ingreso1);
 		trabajador.añadirIngreso(ingreso2);
+		
 		assertEquals(3000, trabajador.getTotalPercibido());
 	}
 	
@@ -47,6 +48,7 @@ class TrabajadorTest {
 	void testGetMontoImponible() {
 		trabajador.añadirIngreso(ingreso1);
 		trabajador.añadirIngreso(ingreso2);
+		
 		assertEquals(1000, trabajador.getMontoImponible());
 	}
 	
@@ -54,6 +56,7 @@ class TrabajadorTest {
 	void testGetImpuestoAPagar() {
 		trabajador.añadirIngreso(ingreso1);
 		trabajador.añadirIngreso(ingreso2);
+		
 		assertEquals(20, trabajador.getImpuestoAPagar());
 	}
 

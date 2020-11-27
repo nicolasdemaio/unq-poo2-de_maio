@@ -31,9 +31,7 @@ public class Trabajador {
 
 	public double getImpuestoAPagar() {
 		
-		double montoImpuesto = (this.getMontoImponible() * 0.02);
-		
-		return montoImpuesto;
+		return this.getMontoImponible() * 0.02;
 	}
 
 }
