@@ -1,5 +1,7 @@
 package ar.edu.unq.po2.tp2;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Empresa {
@@ -10,6 +12,8 @@ public class Empresa {
 	private List<ReciboDeHaberes> recibos;
 	
 	public Empresa(String nombre, String cuit) {
+		this.empleados = new ArrayList<>();
+		this.recibos = new ArrayList<>();
 		this.nombre = nombre;
 		this.cuit = cuit;
 	}
@@ -65,6 +69,28 @@ public class Empresa {
 	
 	public void agregarEmpleado(Empleado empleado) {
 		empleados.add(empleado);
+	}
+	
+	
+	// Muestra de codigo, ejercicio parte c)
+	public static void main(String[] args) {
+		Empresa empresa = new Empresa("Bernal", "123-4");
+		
+		Empleado unEmpleado = new EmpleadoPlantaPermanente("Pepe", "Bernal", "Soltero", LocalDate.now(), 10000, 2);
+		Empleado otroEmpleado = new EmpleadoContratado("Jose", "Quilmes", "Soltero", LocalDate.now(), 20000, 1, "Tarjeta");
+	
+		empresa.agregarEmpleado(unEmpleado);
+		empresa.agregarEmpleado(otroEmpleado);
+		
+		System.out.println("- Monto de Sueldos Netos total -");
+		System.out.println(empresa.montoSueldosNetos());
+		
+		System.out.println("- Generacion de Recibos -");
+		empresa.liquidarSueldos();
+
+		for (ReciboDeHaberes recibo : empresa.recibos()) {
+			System.out.println(recibo);
+		}
 	}
 	
 }
