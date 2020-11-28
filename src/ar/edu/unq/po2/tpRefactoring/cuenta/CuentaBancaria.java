@@ -17,9 +17,9 @@ public abstract class CuentaBancaria {
 		return saldo;
 	}
 	
-	public final void extraer(Integer monto) {
-		if (this.cumpleCondicionesParaExtraer(monto)) {
-			this.realizarExtraccionExitosa(monto);
+	public final void extraer(Integer monto) { /* Template Method */
+		if (this.cumpleCondicionesParaExtraer(monto)) { /* Operacion primitiva, metodo abstracto */
+			this.realizarExtraccionExitosa(monto); /* Operacion concreta */
 		}
 	}
 
@@ -36,6 +36,10 @@ public abstract class CuentaBancaria {
 	protected abstract Boolean cumpleCondicionesParaExtraer(Integer monto);
 }
 
-// BadSmell: Duplicate Code - Codigo duplicado, reparado con un Template Method.
-// Refactors aplicados: Patron de diseño - Template Method.
-// También: Extract method para agrupar comportamiento #realizarExtraccionExitosa.
+/* Bad Smell:
+ * Duplicate Code - Codigo duplicado en varias clases,a pesar de tener la jerarquia de clases.
+ * "If the duplicate code is similar but not completely identical, use Form Template Method."
+ * Lo solucione con el patron de diseño Template Method.
+ * Utilice, ademas, extract method para agrupar comportamiento #realizarExtraccionExitosa.
+ */
+

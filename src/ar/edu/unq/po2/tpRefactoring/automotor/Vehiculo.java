@@ -14,7 +14,7 @@ public class Vehiculo {
 	}
 
 	public Boolean debeRealizarVtv(LocalDate fecha) {
-		return (!this.esVehiculoPolicial && this.noEsVehiculoReciente(fecha) && this.estaRadicadoEnBuenosAires());
+		return (!this.esVehiculoPolicial() && this.noEsVehiculoReciente(fecha) && this.estaRadicadoEnBuenosAires());
 	}
 	
 	public Boolean esVehiculoPolicial() {

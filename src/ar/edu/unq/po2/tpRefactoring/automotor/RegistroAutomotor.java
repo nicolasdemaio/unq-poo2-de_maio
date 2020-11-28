@@ -11,7 +11,8 @@ public class RegistroAutomotor {
 	}
 }
 
-/* Bad Smells: Feature Envy - RegistroAutomor consulta los atributos al vehiculo para #debeRealizarVtv.
+/* Bad Smells: 
+ * Feature Envy: "A method accesses the data of another object more than its own data." - RegistroAutomor consulta todo al vehiculo para #debeRealizarVtv.
  * Vehiculo era un Data Class.
  * 
  * Refactors: 
