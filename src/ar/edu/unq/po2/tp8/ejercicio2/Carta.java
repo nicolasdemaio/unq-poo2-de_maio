@@ -18,6 +18,11 @@ public class Carta {
         return this.palo;
     }
     
+    /**
+     * Indica si el valor numerico de una carta es mayor al de otra carta
+     * @param unaCarta
+     * @return Boolean
+     */
     public Boolean esDeValorSuperiorA(Carta unaCarta) {
         return this.getValorNumerico() > unaCarta.getValorNumerico();
     }

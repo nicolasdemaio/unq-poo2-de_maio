@@ -46,8 +46,10 @@ class PokerStatusTest {
 	void cuandoNoEsPokerNiColorNiTrio_EsNada() {
 		
 		// Setup
+		//SUT
 		PokerStatus pokerStatus = new PokerStatus();
 		
+		//DOC
 		Carta carta2Diamante = mock(Carta.class);
 		Carta carta2Trebol = mock(Carta.class);
 		Carta carta10Picas = mock(Carta.class);
@@ -71,8 +73,10 @@ class PokerStatusTest {
 	void cuando5Cartas_SonDelMismoColorYPalo_EsColor() {
 		
 		// Setup
+		//SUT
 		PokerStatus pokerStatus = new PokerStatus();
 		
+		//DOC
 		Carta carta5Picas = mock(Carta.class);
 		Carta carta8Picas = mock(Carta.class);
 		Carta carta2Picas = mock(Carta.class);
@@ -91,8 +95,10 @@ class PokerStatusTest {
 	void cuando3CartasPoseenElMismoValor_EsTrio() {
 		
 		//  Setup
+		//SUT
 		PokerStatus pokerStatus = new PokerStatus();
 		
+		//DOC
 		Carta carta5Picas = mock(Carta.class);
 		Carta carta2Trebol = mock(Carta.class);
 		Carta carta2Diamante = mock(Carta.class);
