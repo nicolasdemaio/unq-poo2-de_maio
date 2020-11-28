@@ -33,4 +33,11 @@ public class Ventana extends JFrame {
 		*/
 	}
 	
+	/*
+	 Ventana es el Client.
+	 DefaultListModel es el Target.
+	 ListaDePalabrasOrdenadasAdapter es el Adapter, extiende DefaultListModel y conoce por composicion ListaDePalabrasOrdenadas.
+	 ListaDePalabrasOrdenadas es el Adaptee.
+	 */
+	
 }

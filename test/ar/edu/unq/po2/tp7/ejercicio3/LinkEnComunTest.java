@@ -23,13 +23,16 @@ class LinkEnComunTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
+		paginaCapital = new PaginaWikipedia("Capital"); // Pagina dentro de lista links
+		
 		linkEnComun = new LinkEnComun();
+		
 		links = new ArrayList<>();
 		links.add(paginaCapital);
+		
 		paginaBernal = new PaginaWikipedia("Bernal");
 		paginaBera = new PaginaWikipedia("Bera", links);
 		paginaQuilmes = new PaginaWikipedia("Quilmes", links);
-		paginaCapital = new PaginaWikipedia("Capital", links); // Pagina dentro de lista links
 	}
 
 	@Test

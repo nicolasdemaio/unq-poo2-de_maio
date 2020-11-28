@@ -36,7 +36,7 @@ public class ListaDePalabrasOrdenadasAdapter extends DefaultListModel {
      Para resolver: 
      1) Agrego palabras a la lista Adaptee.
      2) Remuevo todos los elementos del vector interno.
-     3) Y Agrego toda slas palabras que tengo en la clase Adaptada list a una Lista que retorna
+     3) Y Agrego todas las palabras que tengo en la clase Adaptada list a una Lista que retorna
      el metodo #elementos(). */
 	
 }

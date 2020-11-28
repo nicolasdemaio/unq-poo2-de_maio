@@ -34,6 +34,14 @@ public class ListaDePalabrasOrdenadas {
 	public String getPalabraDePosicion(int posicion){
 		return this.palabras.get(posicion);
 	}
+	
+	/* Explicación del Comparator:
+	   Al instanciar esta clase, se setea un Comparador el cual compara 2 palabras que recibe como argumento
+	   ignorando las mayusculas.
+	   
+	   Para ordenar las palabras utiliza el static Collections.sort y le pasa este comparador,
+	   esto ordena la lista de forma alfabetica.
+	 */
 
 	
 }
