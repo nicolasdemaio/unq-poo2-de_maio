@@ -19,6 +19,7 @@ class ParcelaMixtaTest {
         Parcela parcelaSoja3  = new ParcelaDeSoja();
         Parcela parcelaTrigo1 = new ParcelaDeTrigo();
         Parcela parcelaTrigo2 = new ParcelaDeTrigo();
+        
         Parcela parcelaMixta1 = new ParcelaMixta(parcelaSoja1, parcelaSoja2, parcelaTrigo1, parcelaTrigo2);
         Parcela parcelaMixta2 = new ParcelaMixta(parcelaMixta1, parcelaSoja3, parcelaSoja1, parcelaSoja2);
         

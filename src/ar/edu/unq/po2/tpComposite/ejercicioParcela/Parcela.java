@@ -16,3 +16,10 @@ public abstract class Parcela {
     public abstract Double gananciaAnual();
     
 }
+
+/*
+ * Decidi utilizar una Clase Abstracta (y no interface) porque
+ * el cliente si tipa o trata con Parcela, deberia poder mandarle añadirParcela.
+ * Si es Leaf, lanza excepcion.
+ * Si es composite, añade parcela.
+ */

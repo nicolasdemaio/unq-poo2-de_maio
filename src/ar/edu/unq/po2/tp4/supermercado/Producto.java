@@ -18,7 +18,7 @@ public class Producto {
 		setEsPrecioCuidado(false);
 	}
 	
-	public boolean esPrecioCuidado() {
+	public Boolean esPrecioCuidado() {
 		return this.esPrecioCuidado;
 	}
 	
