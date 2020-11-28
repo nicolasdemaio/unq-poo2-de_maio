@@ -5,18 +5,18 @@ import java.util.List;
 
 /* LEAF */
 
-public class Circulito implements IShapeShifter{
+public class ShapeShifterSimple implements IShapeShifter{
     
     private Integer valor;
     
-    public Circulito (Integer valor) {
+    public ShapeShifterSimple (Integer valor) {
         this.valor = valor;
     }
 
     @Override
     public IShapeShifter compose(IShapeShifter figura) {
         List <IShapeShifter> lista = Arrays.asList(this,figura);
-        return new Rectangulito (lista);
+        return new ShapeShifterCompuesto(lista);
     }
 
     @Override
