@@ -18,9 +18,9 @@ class PartidoTestCase {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		resultado = "7 a 1";
-		contrincantes = Arrays.asList("Alemania", "Brasil");
-		deporte = "fuchibol";
+		resultado = "3 - 2";
+		contrincantes = Arrays.asList("Argentina", "Suecia");
+		deporte = "Futbol";
 		
 		partido = new Partido (resultado, contrincantes, deporte);
 	}

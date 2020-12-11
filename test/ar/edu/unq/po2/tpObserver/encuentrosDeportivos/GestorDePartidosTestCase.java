@@ -28,15 +28,17 @@ class GestorDePartidosTestCase {
 	
 	@Test
 	void testAgregarObserver() {
+		//Setup
 		IObserver observer = mock(IObserver.class);
 		Set<String> intereses = new HashSet<String>();
-		intereses.add("Football");
-		intereses.add("RicardoFort");
+		intereses.add("Futbol");
+		intereses.add("Maradona");
 		
 		gestor.agregarObserver(observer, intereses);
 		
-		assertTrue(gestor.suscriptoresDelAspecto("Football").contains(observer));
-		assertTrue(gestor.suscriptoresDelAspecto("RicardoFort").contains(observer));
+		//Verify
+		assertTrue(gestor.suscriptoresDelAspecto("Futbol").contains(observer));
+		assertTrue(gestor.suscriptoresDelAspecto("Maradona").contains(observer));
 		
 	}
 	
@@ -44,17 +46,22 @@ class GestorDePartidosTestCase {
 	void testRecibirPartido() {
 		//SETUP
 		IObserver observerConIntereses = mock(IObserver.class);
+		
 		IObserver observerSinIntereses = mock(IObserver.class);
+		
 		Set<String> interesesQueImportan = new HashSet<String>();
-		interesesQueImportan.add("Football");
-		interesesQueImportan.add("RicardoFort");
+		interesesQueImportan.add("Futbol");
+		interesesQueImportan.add("Maradona");
+		
 		Set<String> interesesQueNoImportan = new HashSet<String>();
 		interesesQueImportan.add("Brasil");
 		interesesQueImportan.add("Alemania");
+		
 		Partido partido = mock(Partido.class);
+		
 		ArrayList<String> interesesQueImportanL = new ArrayList <String>();
-		interesesQueImportanL.add("Football");
-		interesesQueImportanL.add("RicardoFort");
+		interesesQueImportanL.add("Futbol");
+		interesesQueImportanL.add("Maradona");
 		
 		when(partido.datosDelPartido()).thenReturn(interesesQueImportanL);
 		
@@ -67,7 +74,7 @@ class GestorDePartidosTestCase {
 		
 		//Verify
 		
-		verify(observerConIntereses,times(2)).update(partido);
+		verify(observerConIntereses,times(2)).update(partido); // Recibe dos veces porque 2 intereses son del partido.
 		verify(observerSinIntereses,never()).update(partido);
 		assertTrue(gestor.getPartidos().contains(partido));
 		

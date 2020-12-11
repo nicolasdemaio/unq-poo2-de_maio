@@ -13,7 +13,7 @@ public class RegistroAutomotor {
 
 /* Bad Smells: 
  * Feature Envy: "A method accesses the data of another object more than its own data." - RegistroAutomor consulta todo al vehiculo para #debeRealizarVtv.
- * Vehiculo era un Data Class.
+ * Vehiculo era un Data Class (clase que almacena datos y solo tiene getters y setters)
  * 
  * Refactors: 
  * - Se le delego la funcionalidad al vehiculo, se le pregunta a este si debe realizar VTV.

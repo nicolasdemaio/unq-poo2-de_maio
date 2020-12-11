@@ -26,7 +26,7 @@ public class ShapeShifterCompuesto implements IShapeShifter {
     @Override
     public Integer deepest() {
         
-        return this.figuras.stream() // 
+        return this.figuras.stream() 
                            .mapToInt(figura -> figura.deepest() + 1) // Un stream de las profundidades de cada ShapeShifter
                            .max().orElseThrow(NoSuchElementException::new); // la excepcion va porque sino es un optional Int
         
@@ -37,7 +37,7 @@ public class ShapeShifterCompuesto implements IShapeShifter {
     @Override
     public IShapeShifter flat() {
         
-        List <IShapeShifter> shapesAtomicas = new ArrayList<>(); // Lista vacia
+        List <IShapeShifter> shapesAtomicas = new ArrayList<>(); // Lista vacia de IShapeShifter
         
         this.values().stream().
                       forEach(valor -> shapesAtomicas.add(new ShapeShifterSimple(valor))); //Por cada valor, creo un ShapeShifterSimple y lo agrego a la lista.
