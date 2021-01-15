@@ -1,10 +1,10 @@
 # unq-poo2-de_maio
 
-##Resolucion de Trabajos Prácticos.
+###Resolucion de Trabajos Prácticos.
 
 *Repositorio destinado a la asignatura **Programación Orientada a Objetos II** ([UNQ](blank:#http://www.unq.edu.ar/)).*
 
-**Herramientas y conceptos utilizadas:**
+**Herramientas y conceptos:**
 - Java
 - UML
 - Mockito (test doubles)
