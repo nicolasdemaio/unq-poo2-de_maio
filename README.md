@@ -2,7 +2,7 @@
 
 ###Resolucion de Trabajos Prácticos.
 
-*Repositorio destinado a la asignatura **Programación Orientada a Objetos II** ([UNQ](blank:#http://www.unq.edu.ar/)).*
+*Repositorio destinado a la asignatura **Programación Orientada a Objetos II*** ([UNQ](blank:#http://www.unq.edu.ar/)).
 
 **Herramientas y conceptos:**
 - Java
