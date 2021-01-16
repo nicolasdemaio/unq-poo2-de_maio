@@ -24,13 +24,13 @@ class PublicationSystemTestCase {
 	}
 	
 	@Test
-	void testAñadirSuscriptor() {
+	void testAgregarSuscriptor() {
 		//Setup
 		IInvestigador investigador = mock(IInvestigador.class);
 		List<String> preferencias = Arrays.asList("Bernal", "Smalltalk");
 		
 		//Exercise
-		sistema.añadirSuscriptor(investigador, preferencias);
+		sistema.agregarSuscriptor(investigador, preferencias);
 		
 		//Verify
 		assertTrue(sistema.getSuscriptores().containsKey(investigador));
@@ -44,7 +44,7 @@ class PublicationSystemTestCase {
 		List<String> preferencias = Arrays.asList("Bernal", "Smalltalk");
 				
 		//Exercise
-		sistema.añadirSuscriptor(investigador, preferencias);
+		sistema.agregarSuscriptor(investigador, preferencias);
 		sistema.removerSuscriptor(investigador);
 				
 		//Verify
@@ -52,7 +52,7 @@ class PublicationSystemTestCase {
 	}
 	
 	@Test
-	void testCuandoSeAñadeUnArticulo_SeNotificaALosSuscriptoresConEsosIntereses() {
+	void testCuandoSeAgregaUnArticulo_SeNotificaALosSuscriptoresConEsosIntereses() {
 		//Setup
 		IInvestigador investigadorNotificado = mock(IInvestigador.class);
 		List<String> preferenciasNotificables = Arrays.asList("Bernal", "Smalltalk");
@@ -66,15 +66,15 @@ class PublicationSystemTestCase {
 		when(articulo.correspondeConLasPreferencias(preferenciasNoNotificables)).thenReturn(false);
 		
 		//Exercise
-		sistema.añadirSuscriptor(investigadorNotificado, preferenciasNotificables);
-		sistema.añadirSuscriptor(investigadorNoNotificado, preferenciasNoNotificables);
+		sistema.agregarSuscriptor(investigadorNotificado, preferenciasNotificables);
+		sistema.agregarSuscriptor(investigadorNoNotificado, preferenciasNoNotificables);
 		
 		sistema.addArticle(articulo);
 		
 		//Verify
 		assertTrue(sistema.getArticulos().contains(articulo));
 		verify(investigadorNotificado, times(1)).update(articulo);
-		verifyNoInteractions(investigadorNoNotificado);
+		verifyZeroInteractions(investigadorNoNotificado);
 	}
 	
 	@Test

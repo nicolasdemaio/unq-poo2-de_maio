@@ -33,8 +33,8 @@ public class Persona {
 	}
 	
 	public int getEdad() {
-		int añoActual = LocalDate.now().getYear();
-		return añoActual - getFechaNacimiento().getYear();
+		int anioActual = LocalDate.now().getYear();
+		return anioActual - getFechaNacimiento().getYear();
 	}
 	
 	public boolean menorQue(Persona persona) {

@@ -43,7 +43,7 @@ public class CounterTestCase {
 		int cantidadPares = counter.cantidadDePares();
 		
 		// Se chequea que la cantidad de pares sea igual a la esperada
-		assertEquals(cantidadPares, 2);
+		assertEquals(2, cantidadPares);
 		
 	}
 	
@@ -54,7 +54,7 @@ public class CounterTestCase {
 		int cantidadDeImpares = counter.cantidadDeImpares();
 		
 		// Se chequea que la cantidad de impares es igual a la esperada
-		assertEquals(cantidadDeImpares, 3);
+		assertEquals(3, cantidadDeImpares);
 		
 	}
 	
@@ -65,8 +65,8 @@ public class CounterTestCase {
 		int cantidadMultiplosDe5 = counter.cantidadDeMultiplos(5);
 		
 		// Se chequea que la cantidad de multiplos sea igual a la esperada
-		assertEquals(cantidadMultiplosDe5, 2);
-		
+		assertEquals(2, cantidadMultiplosDe5);
+
 	}
 	
 }

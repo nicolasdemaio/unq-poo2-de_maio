@@ -20,7 +20,7 @@ public class Trabajador {
 		return ingresos.stream().mapToDouble(Ingreso::getMonto).sum();
 	}
 
-	public void añadirIngreso(Ingreso ingreso) {
+	public void agregarIngreso(Ingreso ingreso) {
 		ingresos.add(ingreso);
 	}
 

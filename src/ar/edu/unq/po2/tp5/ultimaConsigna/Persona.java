@@ -22,9 +22,9 @@ public class Persona implements SerVivo {
 
 	public Integer getEdad() {
 		
-		int añoActual = LocalDate.now().getYear();
-		
-		int edad = añoActual - this.fechaNacimiento.getYear();
+		int anioActual = LocalDate.now().getYear();
+
+		int edad = anioActual - this.fechaNacimiento.getYear();
 		
 		return edad;
 	}

@@ -16,7 +16,7 @@ public abstract class NotificationManager {
 		return this.suscriptores;
 	}
 
-	protected void añadirSuscriptor(IInvestigador investigador, List<String> preferencias) {
+	protected void agregarSuscriptor(IInvestigador investigador, List<String> preferencias) {
 		this.suscriptores.put(investigador, preferencias);
 	}
 

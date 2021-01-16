@@ -26,9 +26,9 @@ class TrabajadorTest {
 	}
 	
 	@Test
-	void testAñadirIngreso() {
+	void testAgregarIngreso() {
 		
-		trabajador.añadirIngreso(ingreso1);
+		trabajador.agregarIngreso(ingreso1);
 		
 		ArrayList<Ingreso> ingresosEsperados = new ArrayList<>();
 		ingresosEsperados.add(ingreso1);
@@ -38,24 +38,24 @@ class TrabajadorTest {
 	
 	@Test
 	void testGetTotalPercibido() {
-		trabajador.añadirIngreso(ingreso1);
-		trabajador.añadirIngreso(ingreso2);
+		trabajador.agregarIngreso(ingreso1);
+		trabajador.agregarIngreso(ingreso2);
 		
 		assertEquals(3000, trabajador.getTotalPercibido());
 	}
 	
 	@Test
 	void testGetMontoImponible() {
-		trabajador.añadirIngreso(ingreso1);
-		trabajador.añadirIngreso(ingreso2);
+		trabajador.agregarIngreso(ingreso1);
+		trabajador.agregarIngreso(ingreso2);
 		
 		assertEquals(1000, trabajador.getMontoImponible());
 	}
 	
 	@Test
 	void testGetImpuestoAPagar() {
-		trabajador.añadirIngreso(ingreso1);
-		trabajador.añadirIngreso(ingreso2);
+		trabajador.agregarIngreso(ingreso1);
+		trabajador.agregarIngreso(ingreso2);
 		
 		assertEquals(20, trabajador.getImpuestoAPagar());
 	}

@@ -15,14 +15,14 @@ public class ParcelaMixta extends Parcela {
 	 */
 	public ParcelaMixta(Parcela parcela1, Parcela parcela2, Parcela parcela3, Parcela parcela4) {
 		hijos = new ArrayList<Parcela>();
-		this.añadirParcela(parcela1);
-		this.añadirParcela(parcela2);
-		this.añadirParcela(parcela3);
-		this.añadirParcela(parcela4);
+		this.agregarParcela(parcela1);
+		this.agregarParcela(parcela2);
+		this.agregarParcela(parcela3);
+		this.agregarParcela(parcela4);
 	}
 	
 	@Override
-	public void añadirParcela(Parcela parcela) throws RuntimeException {
+	public void agregarParcela(Parcela parcela) throws RuntimeException {
 		if(hijos.size() <= 4) {
 			hijos.add(parcela);
 		}

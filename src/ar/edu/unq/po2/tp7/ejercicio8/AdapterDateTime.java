@@ -1,13 +1,13 @@
 package ar.edu.unq.po2.tp7.ejercicio8;
 
-import org.joda.time.DateTime;
-import org.joda.time.ReadableInstant;
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 
 public class AdapterDateTime implements IFecha {
 
-	private DateTime fecha;
+	private LocalDate fecha;
 	
-	public AdapterDateTime(DateTime fecha) {
+	public AdapterDateTime(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 	
@@ -18,22 +18,22 @@ public class AdapterDateTime implements IFecha {
 
 	@Override
 	public boolean antesDeAhora() { 
-		return this.fecha.isBeforeNow();
+		return this.fecha.isBefore(LocalDate.now());
 	}
 
 	@Override
 	public boolean antesDe(IFecha fecha) {
-		return this.fecha.isBefore((ReadableInstant)fecha); //
+		return this.fecha.isBefore((ChronoLocalDate) fecha); //
 	}
 
 	@Override
 	public boolean despuesDeAhora() {
-		return this.fecha.isAfterNow();
+		return this.fecha.isAfter(LocalDate.now());
 	}
 
 	@Override
 	public boolean despuesDeFecha(IFecha fecha) {
-		return this.fecha.isAfter((ReadableInstant)fecha);
+		return this.fecha.isAfter((ChronoLocalDate) fecha);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class AdapterDateTime implements IFecha {
 
 	@Override
 	public int mes() {
-		return this.fecha.getMonthOfYear();
+		return this.fecha.getMonthValue();
 	}
 
 	@Override

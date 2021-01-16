@@ -4,8 +4,8 @@ package ar.edu.unq.po2.tpComposite.ejercicioParcela;
 
 public abstract class Parcela {
 	
-	public void añadirParcela(Parcela parcela) throws Exception {
-        throw new Exception ("Solo se puede añadir parcelas a parcelas mixtas");
+	public void agregarParcela(Parcela parcela) throws Exception {
+        throw new Exception ("Solo se puede aï¿½adir parcelas a parcelas mixtas");
     }
     
     public void removerParcela (Parcela parcela) throws Exception {
@@ -19,7 +19,7 @@ public abstract class Parcela {
 
 /*
  * Decidi utilizar una Clase Abstracta (y no interface) porque
- * el cliente si tipa o trata con Parcela, deberia poder mandarle añadirParcela.
+ * el cliente si tipa o trata con Parcela, deberia poder mandarle aï¿½adirParcela.
  * Si es Leaf, lanza excepcion.
- * Si es composite, añade parcela.
+ * Si es composite, aï¿½ade parcela.
  */

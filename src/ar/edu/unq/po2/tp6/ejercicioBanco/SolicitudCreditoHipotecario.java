@@ -13,14 +13,14 @@ public class SolicitudCreditoHipotecario extends SolicitudCredito {
 	public boolean esAceptable() {
 		return cuotaNoSupera50PorCientoDeIngresoMensualDelCliente() && 
 				montoEsMenorAl70PorcientoDelValorFiscalDeGarantia() &&
-				clienteNoSupera65AñosAntesDeTerminarDePagar();
+				clienteNoSupera65AniosAntesDeTerminarDePagar();
 	}
 
-	private boolean clienteNoSupera65AñosAntesDeTerminarDePagar() {
-		return this.cliente.getEdad() + plazoEnAños() <= 65;
+	private boolean clienteNoSupera65AniosAntesDeTerminarDePagar() {
+		return this.cliente.getEdad() + plazoEnAnios() <= 65;
 	}
 
-	private Integer plazoEnAños() {
+	private Integer plazoEnAnios() {
 		return getPlazo()/12;
 	}
 

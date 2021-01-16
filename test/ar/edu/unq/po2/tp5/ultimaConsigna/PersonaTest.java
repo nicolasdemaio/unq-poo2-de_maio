@@ -31,22 +31,22 @@ class PersonaTest {
 	}
 	
 	@Test
-	void unaPersonaQueNacioEn2018Tiene2AñosDeEdad() {
+	void unaPersonaQueNacioEn2018Tiene2AniosDeEdad() {
 		assertEquals(2, persona1.getEdad());
 	}
 	
 	@Test
-	void unaPersonaQueNacioEn2005Tiene15AñosDeEdad() {
+	void unaPersonaQueNacioEn2005Tiene15AniosDeEdad() {
 		assertEquals(5, persona2.getEdad());
 	}
 	
 	@Test
-	void unaPersonaQueNacioEn2018EsMenorAUnaPersonaQueNacioEnElAño2015() {
+	void unaPersonaQueNacioEn2018EsMenorAUnaPersonaQueNacioEnElAnio2015() {
 		assertTrue(persona1.esMenor(persona2));
 	}
 	
 	@Test
-	void unaPersonaQueNacioEnElAño2015NoEsMenorQueUnaPersonaQueNacioEnEl2018() {
+	void unaPersonaQueNacioEnElAnio2015NoEsMenorQueUnaPersonaQueNacioEnEl2018() {
 		assertFalse(persona2.esMenor(persona1));
 	}
 
